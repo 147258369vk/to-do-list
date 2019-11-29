@@ -1,10 +1,19 @@
-const mongoose = require('mongoose')
+// const mongoose = require('mongoose')
 
-mongoose.connect('mongodb+srv://robinsinghkamboj:robinsingh@cluster0-rneh1.gcp.mongodb.net/to-do-list?retryWrites=true&w=majority', { useNewUrlParser: true}, (err) => {
-    if(!err) {
-        console.log('MongoDB connection succeeded!!!')
-    }
-    else {
-        console.log('Error in DB connection: ' + err)
-    }
-})
+// mongoose.connect('mongodb+srv://robinsinghkamboj:robinsingh@cluster0-rneh1.gcp.mongodb.net/to-do-list?retryWrites=true&w=majority', { useNewUrlParser: true}, (err) => {
+//     if(!err) {
+//         console.log('MongoDB connection succeeded!!!')
+//     }
+//     else {
+//         console.log('Error in DB connection: ' + err)
+//     }
+// })
+
+const MongoClient = require('mongodb').MongoClient;
+const uri = "mongodb+srv://robinsinghkamboj:<password>@cluster0-rneh1.gcp.mongodb.net/to-do-list?retryWrites=true&w=majority";
+const client = new MongoClient(uri, { useNewUrlParser: true });
+client.connect(err => {
+  const collection = client.db("test").collection("devices");
+  // perform actions on the collection object
+  client.close();
+});
