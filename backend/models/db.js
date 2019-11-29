@@ -1,6 +1,6 @@
 const mongoose = require('mongoose')
 
-mongoose.connect('mongodb+srv://robinsinghkamboj:robinsingh@cluster0-rneh1.gcp.mongodb.net/to-do-list?retryWrites=true&w=majority&connectTimeoutMS=50000&bufferCommands=false', { useNewUrlParser: true,keepAlive: true, keepAliveInitialDelay: 300000,urlUnifiedTopology:true}, (err) => {
+mongoose.connect('mongodb+srv://robinsinghkamboj:robinsingh@cluster0-rneh1.gcp.mongodb.net/to-do-list?retryWrites=true&w=majority&connectTimeoutMS=500000&bufferCommands=false', { useNewUrlParser: true,keepAlive: true, keepAliveInitialDelay: 300000,urlUnifiedTopology:true}, (err) => {
     if(!err) {
         console.log('MongoDB connection succeeded!!!')
     }
