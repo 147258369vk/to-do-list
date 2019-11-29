@@ -46,6 +46,6 @@ app.use(passport.initialize())
 
 app.use('/', router)
 
-var port = (PROCESS.ENV.PORT || 3000)
+var port = (process.env.PORT || 3000)
 
 app.listen(port)
