@@ -10,8 +10,8 @@
 // })
 
 const MongoClient = require('mongodb').MongoClient;
-const uri = "mongodb+srv://robinsinghkamboj:robinsingh@cluster0-rneh1.gcp.mongodb.net/to-do-list?retryWrites=true&w=majority";
-const client = new MongoClient(uri, { useNewUrlParser: true });
+// const uri = "mongodb+srv://robinsinghkamboj:robinsingh@cluster0-rneh1.gcp.mongodb.net/to-do-list?retryWrites=true&w=majority";
+const client = new MongoClient('mongodb+srv://robinsinghkamboj:robinsingh@cluster0-rneh1.gcp.mongodb.net/to-do-list?retryWrites=true&w=majority', { useNewUrlParser: true });
 client.connect(err => {
   //const collection = client.db("test").collection("devices");
   // perform actions on the collection object
