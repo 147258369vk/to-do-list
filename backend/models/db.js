@@ -1,6 +1,6 @@
 const mongoose = require('mongoose')
 
-mongoose.connect('mongodb+srv://robinsinghkamboj:robinsingh@cluster0-rneh1.gcp.mongodb.net/to-do-list, { useNewUrlParser: true,keepAlive: true, keepAliveInitialDelay: 300000,useUnifiedTopology:true}, (err) => {
+mongoose.connect('mongodb+srv://todolist:todolist123@cluster0-d9trw.mongodb.net/test?retryWrites=true&w=majority, { useNewUrlParser: true,keepAlive: true, keepAliveInitialDelay: 300000,useUnifiedTopology:true}, (err) => {
     if(!err) {
         console.log('MongoDB connection succeeded!!!')
     }
